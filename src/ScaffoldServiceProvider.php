@@ -2,10 +2,10 @@
 
 namespace Phellar\Scaffold;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Phellar\Scaffold\Commands\ScaffoldCommand;
 use Scaffold\PaymentManager;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ScaffoldServiceProvider extends PackageServiceProvider
 {
@@ -23,7 +23,7 @@ class ScaffoldServiceProvider extends PackageServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/scaffold.php', 'scaffold');
 
         // Bind PaymentManager to container
-        $this->app->singleton('payment', function($app){
+        $this->app->singleton('payment', function ($app) {
             return new PaymentManager($app);
         });
     }

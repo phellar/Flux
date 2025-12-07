@@ -15,7 +15,7 @@ class FlutterwaveGateway implements PaymentGatewayInterface
 
     public function charge(array $data)
     {
-        //Flutterwave charge API call
+        // Flutterwave charge API call
     }
 
     public function verify(string $reference)

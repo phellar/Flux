@@ -2,8 +2,8 @@
 
 namespace Scaffold;
 
-use Scaffold\Gateways\PaystackGateway;
 use Scaffold\Gateways\FlutterwaveGateway;
+use Scaffold\Gateways\PaystackGateway;
 
 class PaymentManager
 {
@@ -16,7 +16,7 @@ class PaymentManager
 
     public function gateway(string $name)
     {
-        return match(strtolower($name)) {
+        return match (strtolower($name)) {
             'paystack' => new PaystackGateway(config('scaffold.paystack')),
             'flutterwave' => new FlutterwaveGateway(config('scaffold.flutterwave')),
             default => throw new \Exception("Gateway {$name} not supported"),

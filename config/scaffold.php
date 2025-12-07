@@ -14,4 +14,3 @@ return [
         'base_uri' => env('FLUTTERWAVE_BASE_URI', 'https://api.flutterwave.com/v3/'),
     ],
 ];
-
